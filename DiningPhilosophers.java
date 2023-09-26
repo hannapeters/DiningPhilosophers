@@ -40,10 +40,7 @@ public class MainB {
 	 * DiningPhilosophers class creates numberOfPhilosophers number of philosophers
 	 * and
 	 * delegates a left and right chopstick to them depending on the algorithm used
-	 * For the A assignment, each philosopher tries to "pick up" the chopstick to
-	 * its left followed
-	 * by the chopstick to its right resulting in a deadlock
-	 * For the B assingment, each philosopher except for the last tries to pick the
+	 * each philosopher except for the last tries to pick the
 	 * chopstick to its left
 	 * the last tries to pick up the chopstick to its right instead
 	 */
@@ -57,12 +54,9 @@ public class MainB {
 		for (int i = 0; i < numberOfPhilosophers; i++) {
 			Philosopher newPhilosopher;
 			if (i == numberOfPhilosophers - 1) {
-				// Code for 6B, last philosopers first picks up the right chopstick, then the
-				// left
+
 				newPhilosopher = new Philosopher(chopsticks.get(0), chopsticks.get(i));
 			} else {
-				// the algorithm for remaining philosopers are the same for 6A and 6B
-				// they each first pick up the left, then the right chopstick
 				newPhilosopher = new Philosopher(chopsticks.get(i), chopsticks.get(i + 1));
 			}
 			Thread philosopherThread = new Thread(newPhilosopher);
