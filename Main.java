@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainB {
+public class Main {
 
 	/*
 	 * Philosopher class takes in left and right chopstick, each thread
